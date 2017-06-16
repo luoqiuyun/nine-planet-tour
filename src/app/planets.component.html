@@ -1,0 +1,22 @@
+<h2>My Planets</h2>
+<div>
+  <label>Planet name:</label> <input #planetName />
+  <button (click)="add(planetName.value); planetName.value=''">
+    Add
+  </button>
+</div>
+<ul class="planets">
+  <li *ngFor="let planet of planets" (click)="onSelect(planet)"
+      [class.selected]="planet === selectedPlanet">
+    <span class="badge">{{planet.id}}</span>
+    <span>{{planet.name}}</span>
+    <button class="delete"
+      (click)="delete(planet); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedPlanet">
+  <h2>
+    {{selectedPlanet.name | uppercase}} is my planet
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

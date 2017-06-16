@@ -1,0 +1,10 @@
+<div id="search-component">
+  <h4>Planet Search</h4>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <div>
+    <div *ngFor="let planet of planets | async"
+         (click)="gotoDetail(planet)" class="search-result" >
+      {{planet.name}}
+    </div>
+  </div>
+</div>
