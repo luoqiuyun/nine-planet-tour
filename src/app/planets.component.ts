@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 
-import { Planet }                from './planet';
-import { PlanetService }         from './planet.service';
+import { Planet }            from './planet';
+import { PlanetService }     from './planet.service';
 
 @Component({
   selector: 'my-planets',

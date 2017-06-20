@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Planet }        from './planet';
-import { PlanetService } from './planet.service';
+import { Planet }            from './planet';
+import { PlanetService }     from './planet.service';
 
 @Component({
   selector: 'my-dashboard',
